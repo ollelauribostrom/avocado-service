@@ -13,13 +13,13 @@ COPY . /www
 WORKDIR /www
 
 # Set environment variables
-ENV PORT 8080
-ENV DBADRESS mongodb://mongo:27017
+ENV PORT 80
+ENV DBADRESS mongodb://mongodb:27017/avocado
 ENV PREFIX /api/v1
 ENV NODE_ENV production
 
 # expose the port to outside world
-EXPOSE  8080
+EXPOSE 80
 
 # start command as per package.json
 CMD MONGO_HOST="mongodb" npm start
